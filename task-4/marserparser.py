@@ -1,8 +1,8 @@
-import requests;
-import json;
-import argparse;
-import sys;
-req = requests.get("https://api.nasa.gov/planetary/apod?api_key=V20QzmsHVs6QaC2lOqFg6XABDPsttrwhsZA1ZWNl");
+import requests
+import json
+import argparse
+import sys
+req = requests.get("https://api.nasa.gov/planetary/apod?api_key=V20QzmsHVs6QaC2lOqFg6XABDPsttrwhsZA1ZWNl")
 
 myparser = argparse.ArgumentParser(prog = 'marserparser',
 description = 'Fetches you the mars pictures from nasa')
@@ -31,6 +31,6 @@ id_of_file = arg.id
 for i in files : 
     if(i['id'] == id_of_file and i['earth_date'] == datefile):
         flag = 1 
-        print(i['img_src']);
+        print(i['img_src'])
 if(flag == 0):
     print("Image Not Found")
